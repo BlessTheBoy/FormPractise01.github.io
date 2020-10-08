@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+$Purple: #9b59b6;
+$Green: #2ecc71;
+$Red: #e74c3c;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    background: $Purple;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+
+    .container{
+        background: #fff;
+        border-radius: 5px;
+        width: 400px;
+        max-width: 100%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 30px auto;
+
+        header{
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #f7f7f7;
+
+            h2{
+                margin: 0;
+            }
+        }
+
+        form{
+            padding: 30px 40px;
+            .form-control{
+                 margin-bottom: 10px;
+                 padding-bottom: 20px;
+                 position: relative;
+
+                 label{
+                    margin-bottom: 5px;
+                    display: inline-block;
+                 }
+
+                 input{
+                    display: block;
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #f0f0f0;
+                    border-radius: 4px;
+                    font-family: inherit;
+                 }
+
+                 i{
+                     visibility: hidden;
+                     position: absolute;
+                     top: 40px;
+                     right: 10px;
+                 }
+
+                 small{
+                     visibility: hidden;
+                     position: absolute;
+                     bottom: 0;
+                     left: 0;
+                 }                 
+            }
+
+            .form-control.success{
+                input{
+                    border-color: $Green;
+                }
+
+                .fa-check-circle{
+                    visibility: initial;
+                    color: $Green;
+                }
+            }
+            .form-control.error{
+                input{
+                    border-color: $Red;
+                }
+
+                .fa-exclamation-circle{
+                    visibility: initial;
+                    color: $Red;
+                }
+
+                small{
+                    visibility: visible;
+                    color: $Red;
+                }
+            }
+
+            button{
+                color: #fff;
+                background: $Purple;
+                border: 2px solid $Purple;
+                width: 100%;
+                padding: 10px;
+                border-radius: 4px;
+                font-family: inherit;
+                display: block;
+                font-size: 1rem;
+            }
+        }
+    }
+}
